@@ -1,0 +1,36 @@
+body {
+	font-family: "helvetica", sans-serif;
+	background: linen;
+	width: 600px;
+	margin: 200px auto;
+	letter-spacing: .1em;
+	line-height: 2em;
+}
+/*
+div {
+	border: 15px solid maroon;
+	text-align: center;
+	padding: 25px;
+}
+*/
+p {
+	border: 1px dashed blue;
+	padding: 15px;
+}
+
+ol {
+	border: 5px solid darksalmon;
+	border-radius: 10px;
+}
+
+.content li {
+	color: brown;
+}
+
+li:first-child {
+	background: yellow;
+}
+
+li:nth-child(3) {
+	background: green;
+}

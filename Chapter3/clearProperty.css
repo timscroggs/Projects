@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	float: left;
+	//background: darkgray;
+	padding: 25px;
+}
+
+body {
+	font-size: 100%;
+
+}
+
+main {
+	background: lightgray;
+	padding: 2%;
+}
+
+h1, h2 {
+	font-family: "Denk One", serif;
+	font-size: xx-large;
+	margin-bottom: 2%;
+	margin-top: 4%;
+}
+
+h2 {
+	font-size: x-large;
+}
+
+.important {
+	font-size: larger;
+}
+
+.onePointTwo {
+	font-size: 1em;
+	background: white;
+}
+
+footer {
+	background: gray;
+	clear: both;
+	padding: 5%;
+}

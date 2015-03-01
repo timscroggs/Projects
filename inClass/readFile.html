@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+/**
+* read text input
+*/
+function readText(filePath) {
+	var reader = new FileReader();
+	reader.onload = function () {
+		var text = reader.result;
+		console.log(text);
+
+		var names = [];
+		names = text.split('","');
+
+		for(var i = 0; i<names.length; i++) {
+			names[i].sort();
+		}
+		console.log(names[3]);
+		
+	};
+	reader.readAsText(filePath.files[0]);
+	
+	
+	
+}
+</script>
+</head>
+<body>
+<div id="container">
+<input type="file" onchange='readText(this)' />
+<br/>
+<hr/>
+<p>Click the button to choose a file to read. The file will be read into a variable called 'text'.</p>
+</div>
+</body>
+</html>
