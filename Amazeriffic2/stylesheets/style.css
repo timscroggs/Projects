@@ -102,15 +102,15 @@ footer .contact {
 
 footer .sitemap {
     float: right;
-    width: 285px;   
+    width: 285px;
 }
 
-.sitemap .c1{
-    width:142px;
-    float:left;
+.sitemap .c1 {
+    width: 142px;
+    float: left;
 }
 
-.sitemap .c2{
+.sitemap .c2 {
     width: 142px;
     float: right;
 }
@@ -132,7 +132,7 @@ footer {
 }
 
 .tabs a span.active {
-        background: #eee;
+    background: #eee;
 }
 
 .content {
@@ -146,5 +146,21 @@ footer {
     background: white;
     border-radius: 5px 5px;
     margin: 10px;
-    padding: 0 5px;
+    padding: 0 10px;
+}
+
+#newTodo {
+    margin: 10px 0 10px 15px;
+    padding: 5px;
+    width: 250px;
+}
+
+#addIt {
+    border-radius: 5px;
+    padding: 0px 7px 4px;
+    background-color: #f5561b;
+    color: white;
+    border: none;
+    margin-left: 7px;
+    font-size: 1.1em;
 }
