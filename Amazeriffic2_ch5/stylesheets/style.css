@@ -1,0 +1,181 @@
+h1 {
+    font-family: "ubuntu", sans-serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: "ubuntu", sans-serif;
+    font-size: x-large;
+}
+
+h3 {
+    font-family: "ubuntu", sans-serif;
+    font-size: large;        
+}
+
+h4 {
+    font-family: "ubuntu", sans-serif;
+}
+
+h5 {
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+h6 {
+    font-weight: bolder;
+    font-size: x-small;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: -5px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #f5561b;
+}
+
+a:visited {
+    color: #f5561b;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {}
+
+body {
+    background: #f2f2f2;
+    font-family: "droid sans", sans-serif;
+    font-size: 100%;
+    line-height: inherit;
+}
+
+header {
+    background: white;
+    overflow: auto;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    border-bottom: 1px #e6e6e6 solid;
+}
+
+header h1 {
+    float: left;
+    width: 570px;
+}
+
+header nav {
+    padding-top: 20px;
+    float: right;
+    width: 285px;
+}
+
+main .content {
+    float: left;
+    width: 570px;
+}
+
+main .mainImage {
+    float: right;
+    width: 285px;
+}
+
+header .container,
+main .container,
+footer .container {
+    max-width: 855px;
+    margin: auto;
+}
+
+main {
+    background: white;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    overflow: auto;
+}
+
+footer {
+    padding-top: 35px;
+    margin-bottom: 175px;
+}
+
+footer .contact {
+    float: left;
+    width: 570px;
+}
+
+footer .sitemap {
+    float: right;
+    width: 285px;
+}
+
+.sitemap .c1 {
+    width: 142px;
+    float: left;
+}
+
+.sitemap .c2 {
+    width: 142px;
+    float: right;
+}
+
+header,
+main,
+footer {
+    min-width: 855px;
+}
+
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+}
+
+.tabs a span.active {
+    background: #eee;
+}
+
+.content {
+    min-width: 855px;
+    padding: 25px 5px 25px 5px;
+    line-height: 2em;
+    background: #eee;
+}
+
+.content li {
+    background: white;
+    border-radius: 5px 5px;
+    margin: 10px;
+    padding: 0 10px;
+}
+
+#newTodo {
+    margin: 10px 0 10px 15px;
+    padding: 5px;
+    width: 250px;
+}
+
+#addIt {
+    border-radius: 5px;
+    padding: 0px 7px 4px;
+    background-color: #f5561b;
+    color: white;
+    border: none;
+    margin-left: 7px;
+    font-size: 1.1em;
+}
+
+#tags {
+    color: #f5561b;
+    border-bottom: 1px #e0e0e0 solid;
+    margin-left: 10px;
+}
