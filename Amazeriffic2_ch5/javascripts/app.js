@@ -12,9 +12,10 @@ var main = function (toDoObjects) {
     //This version uses the jQuery shorthand techniques
 
     $(".tabs span").toArray().forEach(function (element) {
+        
         //creates a click handler for this element
-
         $(element).on("click", function () {
+            
             //since were using the jQuery version of element, we'll go ahead
             //and create a temp variable so we don't have to keep recreating
             //it
