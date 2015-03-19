@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Amplify</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--<script src='amp2.js'></script>-->
+    <script language="javascript"
+            src="http://portaltnx.openamplify.com/AmplifyWeb_v21/AmplifyThis?analysis=all
+                 &apikey=276zgea5n9ysrfuhke91h9sczn8zqiqm
+                 &outputformat=json_js
+                 &inputtext=This%20is%20a%20test%20text.%20Hello%20world!"> 
+    </script> 
+
+    <script language="javascript">
+        var topics = amplifyOutput.AmplifyResponse.AmplifyReturn.Topics;
+        for (var i = 0; i<.TopTopics.length; i++) {
+            document.write("<p>Topic Name: " +
+                           topics.TopTopics[i].Topic.Name + "</p>"); 
+            document.write("<p>Topic Score: " +
+                           topics.TopTopics[i].Topic.Value + "</p>"); 
+        }
+    </script>
+    
+    <script>
+        function appendText() {
+            var txt1 = "<p>Text.</p>";               // Create element with HTML  
+            var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+            var txt3 = document.createElement("p");  // Create with DOM
+            txt3.innerHTML = "Text.";
+            $("p").append(txt1, txt2, txt3);         // Append the new elements 
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Amplify the words</h1>
+    </header>
+    <main>
+        <p>HIIIIIIII! | </p>
+    </main>
+    <footer>
+        
+    </footer>
+    
+</body>
+
+</html>
