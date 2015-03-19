@@ -18,9 +18,9 @@
         
         var endpoint = "http://portaltnx.openamplify.com/AmplifyWeb_v21/AmplifyThis",
             url = "http://portaltnx.openamplify.com/AmplifyWeb_v21/AmplifyThis",
-            urlendpoint = endpoint + "apiKey=" + apiKey + ",inputText=" + inputText + ",outputFormat=" + outputFormat;
+            urlendpoint = endpoint + "/apiKey=" + apiKey + "&inputText=" + inputText + "&analysis=" + analysis + "&outputFormat=" + outputFormat;
         
-        $.getJSON(url, function (reply) {
+        $.getJSON(urlendpoint, function (reply) {
             console.log(reply);
         });
     };
