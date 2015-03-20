@@ -5,19 +5,10 @@
     <title>Node.js Example | AlchemyAPI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="alchemyapi.js"></script>
-    <script>
-        var AlchemyAPI = require('./alchemyapi');
-        var alchemyapi = new AlchemyAPI();
-        
-        var myText = "Whoa, AlchemyAPI's Node.js SDK is really great, I can't wait to build my app!";
-        
-        function myFunction() {
-            alchemyapi.sentiment("text", myText, {}, function (response) {
-                console.log("Sentiment: " + response["docSentiment"]["type"]);
-            });
-        }
-    </script>
+    
+    <script src="test.js"></script>
+    <script src="server2.js"></script>
+    
 </head>
 
 <body>
