@@ -1,23 +1,32 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Alchemy</title>
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src='test.js'></script>
-    
+    <title>Node.js Example | AlchemyAPI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="alchemyapi.js"></script>
+    <script>
+        var AlchemyAPI = require('./alchemyapi');
+        var alchemyapi = new AlchemyAPI();
+        
+        var myText = "Whoa, AlchemyAPI's Node.js SDK is really great, I can't wait to build my app!";
+        
+        function myFunction() {
+            alchemyapi.sentiment("text", myText, {}, function (response) {
+                console.log("Sentiment: " + response["docSentiment"]["type"]);
+            });
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <h1>this is a test in getting alchemy to work</h1>
-    </header>
-    <main>
-        <p>Hi. </p>
-    </main>
-    <footer>
-        
-    </footer>
-    
+    <h1>Burning Bridges</h1>
+
+    <p id="demo">Paste your email in here before sending to make sure your not burning bridges!</p>
+    <input id="email" type="text">
+
+    <button type="button" onclick="myFunction()">Will this email burn a bridge?</button>
 </body>
 
 </html>
