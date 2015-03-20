@@ -1,3 +1,6 @@
+// PASTE INTO A TERMINAL WINDOW (while in project directory): 
+//      node alchemyapi.js fcff12e9ce3b2504d329e67bc8dafb0861d1d812
+
 var AlchemyAPI = require('./alchemyapi');
 var alchemyapi = new AlchemyAPI();
 
