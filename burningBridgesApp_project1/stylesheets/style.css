@@ -1,0 +1,76 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    line-height: normal;
+}
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header {
+    
+}
+
+main .container, header .container, .result{
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
+    
+}
+
+#negResponse{
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
+    color: red;
+}
+
+#slightNegResponse {
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
+    color: skyblue;
+}
+
+#posResponse{
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
+    color: #01ba01;
+}
+#userInput {
+    
+    height: 250px;
+    width: 90%;
+    background: #ffffff;
+    color: #646464;
+    border: 1px #e5e5e5 solid;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    
+}
+
+input[type=submit] {
+    margin-top: 20px;
+    border: 1px solid #f44c0e;
+    color: #fff;
+    background: tomato;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 16px;
+   
+    
+    
+}
+
+input[type=submit]:hover {
+    border: 1px solid #ff765d;
+    color: #fff;
+    background: #ff765d;
+    
+}
