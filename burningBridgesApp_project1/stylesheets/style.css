@@ -34,6 +34,12 @@ main .container, header .container, .result{
 #slightNegResponse {
     max-width: 85%;
     padding: 100px 100px 0 100px;
+    color: #ef7466;
+}
+
+#neutralResponse {
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
     color: skyblue;
 }
 

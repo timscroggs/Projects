@@ -25,6 +25,7 @@
 
 
         $("input[type=submit]").on("click", function (evt) {
+            
             $("main .container").slideUp(400);
             var $text = $('#userInput').val();
             console.log($text);
@@ -39,25 +40,28 @@
                 console.log(sentiment);
 
                 if (score < -0.5) {
-                    //alert('negative');
                     var $item = $('<p id="negResponse">');
-                    $item.append("Your text was negative, with this email you may be burning bridges");                   
+                    $item.append("This text comes off as negative and may be burning bridges.");                   
                     
                 } else if (score < 0) {
-                    //alert('negative');
                     var $item = $('<p id="slightNegResponse">');
-                    $item.append("Your text was on the verge of negative, and may be burning bridges if sent");  
+                    $item.append("This text is on the verge of being negative and may begin fires that end up burning bridges.");
+                
+            }    else if (sentiment == "neutral") {
+                        var $item = $('<p id="neutralResponse">');
+                        $item.append("In the end this text comes off as neutral – whether positive or negative at times.");
                 }
                 else {
                     var $item = $('<p id="posResponse">');
-                    $item.append("Your score was calculated as positive");
+                    $item.append("This text comes off as positive and should be taken well.");
                 }  
-
                 $('main').append($item);
             });
+            
         });
+        
     };
-
+    
     $(document).ready(main);
 }());
 
