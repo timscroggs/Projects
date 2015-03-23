@@ -19,7 +19,7 @@ header {
     
 }
 
-main .container, header .container, .result{
+main .container, header .container, .result, main .refresh{
     max-width: 85%;
     padding: 100px 100px 0 100px;
     

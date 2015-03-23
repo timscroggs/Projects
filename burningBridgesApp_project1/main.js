@@ -17,6 +17,7 @@
     "use strict";
 
 var start = function () {
+    $('#refreshButton').hide();
     
     var apikey = 'fcff12e9ce3b2504d329e67bc8dafb0861d1d812',
 
@@ -55,19 +56,34 @@ var start = function () {
             
             $('main').append($item);
             
+            $('#refreshButton').show();
+            
+            
         }); //end of getJSON Call 
         
     }); //button ending
+    //refresh();
     
 }; //end of Start function
 
 
+var refresh = function() {
+    var $refreshButton = $('<input type="submit" id="refreshButton" value="Do it again!">');
+    
+    $refreshButton.append('.main .container');
+    
+    $("input[type=submit]").on("click", function (evt) {
+        console.log('hello');
+        location.reload();
+    });
+};
 
 
 
 
     var main = function () {
         start();
+        //refresh();
     };
     
     $(document).ready(main);
