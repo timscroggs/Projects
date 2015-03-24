@@ -18,6 +18,7 @@ var start = function () {
         $("main .container").slideUp(400);
         var $text = $('#userInput').val();
         console.log($text);
+        //$('#userInput input').empty();
 
         var url = 'http://access.alchemyapi.com/calls/text/TextGetTextSentiment?' + 'apikey=' + apikey + '&text=' + $text + '&outputMode=' + outputMode + '&showSourceText=' + showSourceText;
 
@@ -57,7 +58,7 @@ var start = function () {
             }
              
         }); //end of getJSON Call 
-     $('userInput').empty();
+     
         refresh();
         
     }); //button ending
