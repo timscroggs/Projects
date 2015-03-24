@@ -56,23 +56,21 @@ var start = function () {
             
             $('main').append($item);
             
-            $('#refreshButton').show();
+            
             
             
         }); //end of getJSON Call 
-        
+        refresh();  
     }); //button ending
-    //refresh();
     
 }; //end of Start function
 
 
 var refresh = function() {
-    var $refreshButton = $('<input type="submit" id="refreshButton" value="Do it again!">');
     
-    $refreshButton.append('.main .container');
+    $('#refreshButton').show();
     
-    $("input[type=submit]").on("click", function (evt) {
+    $("#refreshButton").on("click", function (evt) {
         console.log('hello');
         location.reload();
     });
