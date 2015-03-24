@@ -10,42 +10,56 @@ h1 {
 h2 {
     font-size: 1.5em;
 }
-
+#warning{
+    padding-top: 25px;
+    font-size: x-small;
+    color:#777777;
+}
 a {
   color: #00B7FF;
 }
 
-header {
+header .container, .result, footer .container {
+    max-width: 85%;
+    padding: 100px 100px 0 100px;
+}
+
+main .container {
+    max-width: 85%;
+    padding: 75px 100px 0 100px;
     
 }
 
-main .container, header .container, .result, main .refresh{
+main .response{
     max-width: 85%;
-    padding: 100px 100px 0 100px;
-    
+    padding: 0 100px 0 100px;
+}
+
+#refreshButton{
+    margin: 100px 100px 0 100px;
 }
 
 #negResponse{
     max-width: 85%;
-    padding: 100px 100px 0 100px;
+    padding: 100px 100px 0 0;
     color: red;
 }
 
 #slightNegResponse {
     max-width: 85%;
-    padding: 100px 100px 0 100px;
-    color: #ef7466;
+    padding: 100px 100px 0 0;
+    color: #ff8000;
 }
 
 #neutralResponse {
     max-width: 85%;
-    padding: 100px 100px 0 100px;
+    padding: 100px 100px 0 0;
     color: skyblue;
 }
 
 #posResponse{
     max-width: 85%;
-    padding: 100px 100px 0 100px;
+    padding: 100px 100px 0 0;
     color: #01ba01;
 }
 #userInput {

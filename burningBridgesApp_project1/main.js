@@ -1,27 +1,15 @@
-/*
-(function() {
-	"use strict";
-	
-	var main = function() {
-		var url = 'http://access.alchemyapi.com/calls/text/TextGetTextSentiment?apikey=fcff12e9ce3b2504d329e67bc8dafb0861d1d812&text=I hate how things get so stressful&outputMode=json&showSourceText=1';
-		$.getJSON(url, function(sentimentResponse) {
-			console.log(sentimentResponse);	
-		});
-	};
-	
-	$(document).ready(main);
-}());
-*/
-
 (function () {
     "use strict";
 
+    var $item = $('');
+    
+    
 var start = function () {
-    $('#refreshButton').hide();
     
     var apikey = 'fcff12e9ce3b2504d329e67bc8dafb0861d1d812',
 
         outputMode = 'json',
+        mixed = 'mixed',
         showSourceText = '1';
     
     
@@ -37,51 +25,70 @@ var start = function () {
 
             var score = sentimentResponse.docSentiment.score;
             var sentiment = sentimentResponse.docSentiment.type;
+            var mixed = sentimentResponse.docSentiment.mixed;
             console.log(score);
             console.log(sentiment);
+            console.log(mixed);
 
             if (score < -0.5) {
-                var $item = $('<p id="negResponse">');
-                $item.append("This text comes off as negative and may be burning bridges.");                   
+                //$item = $('<p id="negResponse">');
+                $('<p id="negResponse">This text comes off as really negative. WARNING: You may be burning bridges!</p>').appendTo("main .response");
             }else if (score < 0) {
-                var $item = $('<p id="slightNegResponse">');
-                $item.append("This text is on the verge of being negative and may begin fires that end up burning bridges.");
+                //$item = $('<p id="slightNegResponse">');
+                if(mixed == 1) {
+                    $('<p id="slightNegResponse">This text has mixed signals but comes off as mostly negative. WARNING: You may be starting fires that end up burning bridges!</p>').appendTo("main .response");  
+                }else{
+                    $('<p id="slightNegResponse">This text comes off as slightly negative. WARNING: You may be starting fires that end up burning bridges!</p>').appendTo("main .response");
+                }
             }else if (sentiment == "neutral") {
-                var $item = $('<p id="neutralResponse">');
-                $item.append("In the end this text comes off as neutral – whether positive or negative at times.");
+                //$item = $('<p id="neutralResponse">');
+                if(mixed == 1) {
+                    $('<p id="neutralResponse">This text has mixed signals but in the end comes off as neutral.</p>').appendTo("main .response");
+                }else{
+                    $('<p id="neutralResponse">This text comes off as neutral.</p>').appendTo("main .response");
+                }
             }else {
-                var $item = $('<p id="posResponse">');
-                $item.append("This text comes off as positive and should be taken well.");
+                //$item = $('<p id="posResponse">');
+                if(mixed == 1) {
+                   $('<p id="posResponse">This text has mixed signals but comes off as mostly positive.</p>').appendTo("main .response");
+                }else{
+                    $('<p id="posResponse">This text comes off as really positive and should be taken well.</p>').appendTo("main .response");
+                }
             }
-            
-            $('main').append($item);
-            
-            
-            
-            
+             
         }); //end of getJSON Call 
-        refresh();  
+     $('userInput').empty();
+        refresh();
+        
     }); //button ending
-    
+   
 }; //end of Start function
 
-
+    
 var refresh = function() {
+    var $refreshButton = $('<input type="submit" id="refreshButton" value="Do it again!">');
+    $refreshButton.insertAfter("main .response")    
     
-    $('#refreshButton').show();
-    
-    $("#refreshButton").on("click", function (evt) {
-        console.log('hello');
-        location.reload();
+    $refreshButton.on("click", function(evt) {
+        
+        $("#negResponse").hide();
+        $("#slightNegResponse").hide();
+        $("#neutralResponse").hide();
+        $("#posResponse").hide();
+        
+        $refreshButton.hide();
+        
+        $("main .container").slideDown("slow", function() {
+            location.reload(true);
+        });  
     });
+    
 };
-
-
 
 
     var main = function () {
         start();
-        //refresh();
+       
     };
     
     $(document).ready(main);

@@ -17,6 +17,7 @@
             <div class='page-header'>
                 <h1>Burning Bridges </h1>
                 <h2>Are you're written responses burning bridges?</h2>
+                
 
             </div>
     </header>
@@ -24,14 +25,23 @@
     <main>
         <div class="container">
 
-            <textarea id='userInput' placeholder="Paste any text that you want"></textarea>
+            <textarea id='userInput' placeholder="Paste text you want evaluated here"></textarea>
             <input type="submit" id="submitButton" value='Check it!'>
-            
+            <p id="warning">If you have a problem delete hash tag symbols and try again.</p>
         </div>
-        <div class="refresh">
-            <input type="submit" id="refreshButton" value='Do it again!'>    
+
+        <div class="response">
+
         </div>
+
     </main>
+    <footer>
+        <div class="container">
+        <p>Concept & Creation by Tim Scroggs</p>
+        <p>Powered by: <a href="http://www.alchemyapi.com/">AlchemyAPI</a>
+        </p>
+            </div>
+    </footer>
 
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
